@@ -3,7 +3,7 @@ import Poster from "./../components/Poster";
 import MovieDetail from "./../components/MovieDetail";
 import * as actions from './../actions';
 import { connect } from 'react-redux';
-import { Container, Grid, Segment } from "semantic-ui-react";
+import { Container, Grid, Segment, Image } from "semantic-ui-react";
 
 class MovieInfoContainer extends Component {
 
@@ -38,7 +38,7 @@ class MovieInfoContainer extends Component {
       );
     } else if (this.props.data.isFound === false) {
       return (
-        <Container textAlign="center">
+        <Container textAlign="center" fluid>
           <h1>Movie Not Found!</h1>
         </Container>
       )
@@ -46,6 +46,7 @@ class MovieInfoContainer extends Component {
       return (
         <Container textAlign="center">
           <h1>Search For A Movie</h1>
+          <Image src="https://www.designmantic.com/blog/wp-content/uploads/2016/02/Movie-poster-design-trends.jpg" fluid/>
         </Container>
       )
     }
@@ -53,7 +54,7 @@ class MovieInfoContainer extends Component {
 
   render() {
     return (
-      <Container>
+      <Container fluid>
         {this.renderMovieInfo()}
       </Container>
     );

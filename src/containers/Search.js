@@ -29,7 +29,6 @@ class Search extends Component {
           />
           <Button
             animated
-            basic
             color="grey"
             size="mini"
             type="submit"
