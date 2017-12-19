@@ -40,6 +40,7 @@ class MovieInfoContainer extends Component {
       return (
         <Container textAlign="center" fluid>
           <h1>Movie Not Found!</h1>
+          <Image src="https://i.ytimg.com/vi/TSXXi2kvl_0/maxresdefault.jpg" centered/>
         </Container>
       )
     } else {

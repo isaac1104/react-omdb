@@ -1,11 +1,12 @@
 import React from "react";
-import { Container, Advertisement } from "semantic-ui-react";
+import { Container, Header as NavHeader, Icon } from "semantic-ui-react";
 
 const Header = () => {
 
   const style = {
     marginBottom: "2rem",
-    width: "100%"
+    width: "100%",
+    backgroundColor: "#343a40",
   }
 
   return (
@@ -13,12 +14,14 @@ const Header = () => {
       textAlign="center"
       style={style}
     >
-      <Advertisement
-        unit="panorama"
-        test="OMDB DataBase"
-        centered
-        style={{width: "100%"}}
-      />
+      <NavHeader
+        as="h1"
+        icon
+        style={{color: "white"}}
+      >
+        <Icon name="film"/>
+        <a href="/" style={{color: "white"}}>OMDB DataBase</a>
+      </NavHeader>
     </Container>
   )
 }
