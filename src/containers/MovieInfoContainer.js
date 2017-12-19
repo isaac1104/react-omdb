@@ -15,7 +15,7 @@ class MovieInfoContainer extends Component {
           <Grid columns={2} relaxed centered>
             <Grid.Column>
               <Segment basic>
-                <Poster/>
+                <Poster poster={data.Poster}/>
               </Segment>
             </Grid.Column>
             <Grid.Column>
@@ -40,20 +40,19 @@ class MovieInfoContainer extends Component {
       return (
         <Container textAlign="center" fluid>
           <h1>Movie Not Found!</h1>
-          <Image src="https://i.ytimg.com/vi/TSXXi2kvl_0/maxresdefault.jpg" centered/>
         </Container>
       )
     } else {
       return (
         <Container textAlign="center">
           <h1>Search For A Movie</h1>
-          <Image src="https://www.designmantic.com/blog/wp-content/uploads/2016/02/Movie-poster-design-trends.jpg" fluid/>
         </Container>
       )
     }
   }
 
   render() {
+    console.log(this.props.data);
     return (
       <Container fluid>
         {this.renderMovieInfo()}
