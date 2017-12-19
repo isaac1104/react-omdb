@@ -1,0 +1,2 @@
+export const FETCH_OMDB_DATA = "FETCH_OMDB_DATA";
+export const FETCH_DATA_FAIL = "FETCH_DATA_FAIL";
