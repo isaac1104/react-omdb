@@ -7,7 +7,7 @@ import { Container } from "semantic-ui-react";
 const App = () => {
 
   const style = {
-    backgroundColor: "beige"
+    backgroundColor: "white"
   }
 
   return (

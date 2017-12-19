@@ -15,12 +15,12 @@ const Header = () => {
       style={style}
     >
       <NavHeader
-        as="h1"
+        as="h3"
         icon
         style={{color: "white"}}
       >
         <Icon name="film"/>
-        <a href="/" style={{color: "white"}}>OMDB DataBase</a>
+        <a href="/" style={{color: "white"}}>Movie Database</a>
       </NavHeader>
     </Container>
   )

@@ -1,28 +1,49 @@
 import React from "react";
-import { Container, Grid } from "semantic-ui-react";
+import { Container, Grid, Statistic } from "semantic-ui-react";
 
 const MovieDetail = (props) => {
   return (
-    <Container>
+    <Container textAlign="center">
       <Grid divided="vertically">
         <Grid.Row>
           <Grid.Column>
-            <h1>{props.title}</h1>
-            <h2>Released: {props.released}</h2>
-            <h3>Director: {props.director}</h3>
-            <h4>Runtime: {props.runtime}</h4>
-            <h5>Rated: {props.rated}</h5>
+            <Statistic.Group>
+              <Statistic size="large">
+                <Statistic.Value text>{props.title}</Statistic.Value>
+              </Statistic>
+            </Statistic.Group>
+            <Statistic.Group>
+              <Statistic>
+                <Statistic.Label>Released:</Statistic.Label>
+                <Statistic.Value text>{props.released}</Statistic.Value>
+                <Statistic.Label>Director:</Statistic.Label>
+                <Statistic.Value text>{props.director}</Statistic.Value>
+                <Statistic.Label>Runtime:</Statistic.Label>
+                <Statistic.Value text>{props.runtime}</Statistic.Value>
+              </Statistic>
+              <Statistic>
+                <Statistic.Label>Metascore:</Statistic.Label>
+                <Statistic.Value text>{props.metascore}</Statistic.Value>
+                <Statistic.Label>Rated:</Statistic.Label>
+                <Statistic.Value text>{props.rated}</Statistic.Value>
+              </Statistic>
+            </Statistic.Group>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <h3>Plot: {props.plot}</h3>
+            <Statistic size="medium">
+              <Statistic.Label>Plot:</Statistic.Label>
+              <Statistic.Value text>{props.plot}</Statistic.Value>
+            </Statistic>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <h5>Awards: {props.awards}</h5>
-            <h5>Metascore: {props.metascore}</h5>
+            <Statistic size="small">
+              <Statistic.Label>Awards:</Statistic.Label>
+              <Statistic.Value text>{props.awards}</Statistic.Value>
+            </Statistic>
           </Grid.Column>
         </Grid.Row>
       </Grid>
