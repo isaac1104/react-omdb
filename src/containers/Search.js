@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 class Search extends Component {
 
   formSubmit = ({ title }) => {
+    this.props.initLoading();
     this.props.getOmdbData(title);
   }
 

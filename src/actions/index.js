@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_OMDB_DATA, FETCH_DATA_FAIL } from "./types";
+import { FETCH_OMDB_DATA, FETCH_DATA_FAIL, INIT_LOADING } from "./types";
 
 export const getOmdbData = (title) => async dispatch => {
   const key = "ac19108c";
@@ -9,5 +9,12 @@ export const getOmdbData = (title) => async dispatch => {
     dispatch({ type: FETCH_DATA_FAIL, payload: false });
   } else {
     dispatch({ type: FETCH_OMDB_DATA, payload: data });
+  }
+}
+
+export const initLoading = () => {
+  return {
+    type: INIT_LOADING,
+    payload: true
   }
 }

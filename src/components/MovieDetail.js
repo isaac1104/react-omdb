@@ -44,7 +44,7 @@ const MovieDetail = (props) => {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <Statistic size="medium">
+            <Statistic size="small">
               <Statistic.Label style={style.label}>Plot:</Statistic.Label>
               <Statistic.Value text style={style.value}>{props.plot}</Statistic.Value>
             </Statistic>
@@ -52,7 +52,7 @@ const MovieDetail = (props) => {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <Statistic size="small">
+            <Statistic size="tiny">
               <Statistic.Label style={style.label}>Awards:</Statistic.Label>
               <Statistic.Value text style={style.value}>{props.awards}</Statistic.Value>
             </Statistic>

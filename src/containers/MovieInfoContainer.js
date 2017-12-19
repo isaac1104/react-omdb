@@ -3,7 +3,7 @@ import Poster from "./../components/Poster";
 import MovieDetail from "./../components/MovieDetail";
 import * as actions from './../actions';
 import { connect } from 'react-redux';
-import { Container, Grid, Segment, Image } from "semantic-ui-react";
+import { Container, Grid, Segment, Loader } from "semantic-ui-react";
 
 class MovieInfoContainer extends Component {
 
@@ -52,9 +52,19 @@ class MovieInfoContainer extends Component {
     }
   }
 
+  renderLoading = () => {
+    if (this.props.data.isLoading === true) {
+      return (
+          <Loader active size='huge'></Loader>
+      )
+    }
+  }
+
   render() {
+    console.log(this.props.data);
     return (
       <Container fluid style={{minHeight: "83vh"}}>
+        {this.renderLoading()}
         {this.renderMovieInfo()}
       </Container>
     );
