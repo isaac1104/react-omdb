@@ -53,9 +53,8 @@ class MovieInfoContainer extends Component {
   }
 
   render() {
-    console.log(this.props.data);
     return (
-      <Container fluid style={{minHeight: "82vh"}}>
+      <Container fluid style={{minHeight: "83vh"}}>
         {this.renderMovieInfo()}
       </Container>
     );
