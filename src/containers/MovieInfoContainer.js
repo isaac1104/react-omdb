@@ -30,6 +30,7 @@ class MovieInfoContainer extends Component {
                   genre={data.Genre}
                   awards={data.Awards}
                   metascore={data.Metascore}
+                  votes={data.imdbVotes}
                 />
               </Segment>
             </Grid.Column>
@@ -39,13 +40,13 @@ class MovieInfoContainer extends Component {
     } else if (this.props.data.isFound === false) {
       return (
         <Container textAlign="center" fluid>
-          <h1>Movie Not Found!</h1>
+          <h1 style={{color: "white"}}>Movie Not Found!</h1>
         </Container>
       )
     } else {
       return (
         <Container textAlign="center">
-          <h1>Search For A Movie</h1>
+          <h1 style={{color: "white"}}>Search For A Movie</h1>
         </Container>
       )
     }
@@ -54,7 +55,7 @@ class MovieInfoContainer extends Component {
   render() {
     console.log(this.props.data);
     return (
-      <Container fluid>
+      <Container fluid style={{minHeight: "82vh"}}>
         {this.renderMovieInfo()}
       </Container>
     );

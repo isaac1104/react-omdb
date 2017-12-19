@@ -6,7 +6,7 @@ const Header = () => {
   const style = {
     marginBottom: "2rem",
     width: "100%",
-    backgroundColor: "#343a40",
+    backgroundColor: "#00aca4",
   }
 
   return (

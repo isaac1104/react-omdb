@@ -29,7 +29,7 @@ class Search extends Component {
           />
           <Button
             animated
-            color="grey"
+            color="teal"
             size="mini"
             type="submit"
             disabled={pristine || submitting}>
