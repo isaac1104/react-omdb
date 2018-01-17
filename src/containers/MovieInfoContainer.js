@@ -14,25 +14,25 @@ class MovieInfoContainer extends Component {
         <div>
           <Grid columns={3} centered>
             <Grid.Column>
-              {/* <Segment basic> */}
-              <Poster poster={data.Poster}/>
-              {/* </Segment> */}
+              <Segment basic>
+                <Poster poster={data.Poster}/>
+              </Segment>
             </Grid.Column>
             <Grid.Column>
-              {/* <Segment basic> */}
-              <MovieDetail
-                title={data.Title}
-                released={data.Released}
-                rated={data.Rated}
-                director={data.Director}
-                plot={data.Plot}
-                runtime={data.Runtime}
-                genre={data.Genre}
-                awards={data.Awards}
-                metascore={data.Metascore}
-                votes={data.imdbVotes}
-              />
-              {/* </Segment> */}
+              <Segment basic>
+                <MovieDetail
+                  title={data.Title}
+                  released={data.Released}
+                  rated={data.Rated}
+                  director={data.Director}
+                  plot={data.Plot}
+                  runtime={data.Runtime}
+                  genre={data.Genre}
+                  awards={data.Awards}
+                  metascore={data.Metascore}
+                  votes={data.imdbVotes}
+                />
+              </Segment>
             </Grid.Column>
           </Grid>
         </div>
