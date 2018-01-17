@@ -3,7 +3,7 @@ import Poster from "./../components/Poster";
 import MovieDetail from "./../components/MovieDetail";
 import * as actions from './../actions';
 import { connect } from 'react-redux';
-import { Container, Grid, Segment, Loader } from "semantic-ui-react";
+import { Grid, Segment, Loader } from "semantic-ui-react";
 
 class MovieInfoContainer extends Component {
 
@@ -11,43 +11,43 @@ class MovieInfoContainer extends Component {
     if (this.props.data.isFound === true) {
       const data = this.props.data.data;
       return (
-        <Container>
-          <Grid columns={2} relaxed centered>
+        <div>
+          <Grid columns={3} centered>
             <Grid.Column>
-              <Segment basic>
-                <Poster poster={data.Poster}/>
-              </Segment>
+              {/* <Segment basic> */}
+              <Poster poster={data.Poster}/>
+              {/* </Segment> */}
             </Grid.Column>
             <Grid.Column>
-              <Segment basic>
-                <MovieDetail
-                  title={data.Title}
-                  released={data.Released}
-                  rated={data.Rated}
-                  director={data.Director}
-                  plot={data.Plot}
-                  runtime={data.Runtime}
-                  genre={data.Genre}
-                  awards={data.Awards}
-                  metascore={data.Metascore}
-                  votes={data.imdbVotes}
-                />
-              </Segment>
+              {/* <Segment basic> */}
+              <MovieDetail
+                title={data.Title}
+                released={data.Released}
+                rated={data.Rated}
+                director={data.Director}
+                plot={data.Plot}
+                runtime={data.Runtime}
+                genre={data.Genre}
+                awards={data.Awards}
+                metascore={data.Metascore}
+                votes={data.imdbVotes}
+              />
+              {/* </Segment> */}
             </Grid.Column>
           </Grid>
-        </Container>
+        </div>
       );
     } else if (this.props.data.isFound === false) {
       return (
-        <Container textAlign="center" fluid>
+        <div style={{textAlign: "center"}}>
           <h1 style={{color: "white"}}>Movie Not Found!</h1>
-        </Container>
+        </div>
       )
     } else {
       return (
-        <Container textAlign="center">
+        <div style={{textAlign: "center"}}>
           <h1 style={{color: "white"}}>Search For A Movie</h1>
-        </Container>
+        </div>
       )
     }
   }
@@ -62,10 +62,10 @@ class MovieInfoContainer extends Component {
 
   render() {
     return (
-      <Container fluid style={{minHeight: "83vh"}}>
+      <div style={{minHeight: "83vh", textAlign: "center"}}>
         {this.renderLoading()}
         {this.renderMovieInfo()}
-      </Container>
+      </div>
     );
   }
 }

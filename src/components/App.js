@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header";
 import Search from "./../containers/Search";
 import MovieInfoContainer from "./../containers/MovieInfoContainer";
-import { Container } from "semantic-ui-react";
 
 const App = () => {
 
@@ -11,14 +10,11 @@ const App = () => {
   }
 
   return (
-    <Container
-      fluid
-      style={style}
-      >
+    <div style={style}>
       <Header/>
       <Search/>
       <MovieInfoContainer/>
-    </Container>
+    </div>
   );
 }
 
